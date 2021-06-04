@@ -620,7 +620,7 @@ m2c_global_add() {
 
             if [[ -n ${M2C_GLOBAL_PORTAINER} ]]
             then
-                M2C_GLOBAL_PORTAINER="1.24.0"
+                M2C_GLOBAL_PORTAINER="1.24.1"
                 m2c_global_save_env
                 m2c_global_up portainer
             fi
@@ -1675,7 +1675,7 @@ m2c_init() {
         version_name="${M2C_CFG_MAGENTO}"
         if [[ "${version_name}" == "2.3.5" ]]
         then
-            version_name="$version_name-p1"
+            version_name="$version_name-p2"
         fi
 
         file_name="magento$([[ "${version_name:0:1}" == "2" ]] && \
@@ -2053,12 +2053,12 @@ m2c_init_help() {
   --domain <magento.test>           Set domain name with .test tld to use for
                                     the project.
   --nginx-version <1.17>            Set Nginx version.
-  --php-version <7.3>               Set PHP version.
+  --php-version <7.4>               Set PHP version.
   --mariadb-version <10.3>          Set MariaDB version.
   --redis-version <5.0>             Set Redis version.
-  --varnish-version <5.2>           Set Varnish version, applicable only when
+  --varnish-version <6.6>           Set Varnish version, applicable only when
                                     --varnish option is present.
-  --elasticsearch-version <6.8>     Set Elasticsearch version. Applicable only
+  --elasticsearch-version <7.12>     Set Elasticsearch version. Applicable only
                                     when --elasticsearch option is present.
   --rabbitmq-version <3.7>          Set RabbitMQ version. Applicable only when
                                     --rabbitmq option is present.
